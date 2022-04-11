@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:100px 500px;
+            grid-template-rows: repeat(1,70px);
+            background-color: rgb(67, 67, 121);
+            justify-content:center;
+            justify-content: space-between;
+            /* margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 50px; */
+            align-items: center;
+        }
+        .container>div{
+            color: white;
+            margin: auto;
+            margin-left: 20px;
+        }
+        .box1>div{
+            display: inline-block;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="font-size: 35px;">
+            MEGAWIDTH
+        </div>
+        <div class="box1">
+            <div>Home</div>
+            <div>About</div>
+            <div>Blog</div>
+            <div>Page</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+           margin-top: 15px;
+           height: 500px;
+           width: 400px;
+           margin: auto;
+           background-color: aquamarine;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <br>
+    <div id="box">
+        Enter Your Age: <input placeholder="enter here" id="age" value=""> <br><br>
+   Gender:
+   <select id="gender" >
+       <option value="gender"></option>
+       <option value="male">male</option>
+       <option value="female">female</option>
+   </select>
+   <br><br>
+   <button onclick="isvalid()">check</button>
+    </div>
+   
+</body>
+<script>
+    function isvalid(){
+        var age= document.getElementById("age").value;
+        var gender=document.getElementById("gender").value;
+        age=Number(age);
+        console.log(age)
+        if(age==0){
+            var heading=document.createElement("h2");
+            heading.innerText="Invalid input";
+            document.querySelector("body>div").append(heading)
+        }
+       else if((age>=21 && gender=="male") || (age>=18 && gender=="female")){
+            var heading=document.createElement("h2");
+            heading.innerText="You can get married";
+            document.querySelector("body>div").append(heading)
+        }
+        else{
+            var heading=document.createElement("h2");
+            heading.innerText="You cannot get married";
+            document.querySelector("body>div").append(heading)
+        }
+    }
+</script>
+</html>

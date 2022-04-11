@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num1" type="number" placeholder="number">
+    <input id="num2" type="number" placeholder="power">
+    <button onclick="getexpo()">click here</button>
+</body>
+<script>
+    var exp=1;
+    function getexpo() {
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        var prod=Number(num1)*Number(num2);
+        alert(prod);
+        for(var i=0;i<num2;i++)
+        {
+           exp*=num1;
+        }
+        console.log(exp)
+        var para=document.createElement("p");
+        para.innerText=exp;
+      document.querySelector("body").append(para);
+    }
+</script>
+</html>
