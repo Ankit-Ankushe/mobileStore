@@ -96,11 +96,11 @@
 
 
       var cartData=[]; 
-    // if(localStorage.getItem('cartData')==null){
-    //     cartData=[];
-    //  }else{
-    //     cartData= JSON.parse(localStorage.getItem("cartData"));
-    //  }
+    if(localStorage.getItem('cartData')==null){
+        cartData=[];
+     }else{
+        cartData= JSON.parse(localStorage.getItem("cartData"));
+     }
       data.forEach(function(mobileData) {
         var box= document.createElement("div");
       var name = document.createElement("h4");

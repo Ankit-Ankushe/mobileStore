@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <style>
+        form{
+
+            margin: auto;
+            width: 500px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+       h1{
+           text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div id="payBox">
+        <h1>Enter your payment details</h1>
+        <form >
+                <input type="number" placeholder="Enter Card Number" id="cardNumber">
+                <input type="text" placeholder="Enter Your Name" id="name">
+                <input type="text" placeholder="Ener Your Address line2" id="address"> 
+            <select >
+                <option value="india">INDIA</option>
+                <option value="usa">USA</option>
+                <option value="canada">CANADA</option>
+                <option value="other">OTHER</option>
+            </select>
+            <div id="bottomBox">
+                    <input type="text" placeholder="city" id="city">
+                <select id="country" >
+                    <option value="india">INDIA</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">CANADA</option>
+                    <option value="other">OTHER</option>
+                </select>
+                <input type="number" placeholder="ZIP-CODE">
+            </div>
+            <input type="submit" value="complete payment">
+        </form>
+        
+    </div>
+</body>
+<script>
+   document.querySelector("form").addEventListener("submit",function(){
+       event.preventDefault();
+       alert("Payment Successfull !")
+       window.location.href="./"
+   });
+</script>
+</html>
